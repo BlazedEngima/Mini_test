@@ -1,9 +1,14 @@
-import config # Secret file that stores api_key
+try:
+    import config # Secret file that stores api_key
+    api_key = config.api_key
+
+except ModuleNotFoundError:
+    import os
+    api_key = os.getenv('api_key')
+
 import datetime
 import requests
 from collections import defaultdict
-
-api_key = config.api_key
 
 # Function to use the geocode API call from openweather map to get lat, lon of cities
 def getGeoCode(city):
