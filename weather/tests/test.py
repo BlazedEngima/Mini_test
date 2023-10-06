@@ -3,7 +3,8 @@ import sys
 from weather import getGeoCode
 
 def test_getGeoCode_valid_city():
-    assert getGeoCode('Jakarta') == (-6.2146, 106.8451)
+    assert getGeoCode('Jakarta') == (-6.1753942, 106.827183)
 
 def test_getGeoCode_invalid_city():
-    assert getGeoCode('InvalidCityName') is None
+    with pytest.raises(ValueError):
+        getGeoCode('InvalidCityName')
