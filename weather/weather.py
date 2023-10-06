@@ -1,4 +1,4 @@
-import config
+import config # Secret file that stores api_key
 import datetime
 import requests
 from collections import defaultdict
