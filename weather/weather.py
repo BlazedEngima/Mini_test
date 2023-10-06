@@ -15,11 +15,19 @@ def getGeoCode(city):
         print('Error fetching city lat lon')
         return
 
-    data = response.json()
+    try:
+        data = response.json()
+    except ValueError:
+        raise ValueError('No JSON returned')
+
+    if not data:
+        raise ValueError('No content in JSON data')
+
     lat = data[0]['lat']
     lon = data[0]['lon']
 
     return lat, lon
+
 
 # Function to get transform a string with the current date to a datetime object
 def getDay(date):
