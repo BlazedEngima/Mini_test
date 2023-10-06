@@ -1,5 +1,4 @@
 import pytest
-import sys
 from weather import getGeoCode
 
 def test_getGeoCode_valid_city():
