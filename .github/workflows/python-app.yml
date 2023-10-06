@@ -38,5 +38,5 @@ jobs:
       env:
         api_key: ${{ secrets.OPENWEATHERMAP }}
       run: |
-        pytest .\\weather
-        pytest .\\foo_bar
+        pytest ./weather
+        pytest ./foo_bar
