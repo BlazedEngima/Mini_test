@@ -27,7 +27,7 @@ def getDay(date):
 def print_dict(data):
     for key, value in data.items():
         date = key.strftime('%a, %d %b %Y')
-        print(f'{date}:\t{value:.2f}')
+        print(f'{date}: {value:.2f}\xb0C')
 
 if __name__ == "__main__":
     city = 'Jakarta'
